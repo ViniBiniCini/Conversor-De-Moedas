@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon512_rounded.png" type="image/png">
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => console.log('Service Worker: Registrado'))
+        .catch(err => console.log(`Service Worker: Erro: ${err}`))
+    });
+  }
+</script>
+</head>
+<body>
+    
+    <h1>Conversor de moedas</h1>
+
+    <label>Digite a moeda base</label>
+    <input id = "moedaBase"> 
+<br>
+<label> Digite a quantidade</label>
+<input id = "quantidade">
+<br>
+    <label>Digite a moeda final</label>
+    <input id = "moedaFinal">
+<br>
+    <button id = "butao">Enviar</button>
+
+<br>
+<div id = "loading" style="display: none;">buscando...</div>
+    <label id = "resultado"> </label>
+
+
+ <script src="index.js"></script> 
+
+</body>
+</html>

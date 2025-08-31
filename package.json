@@ -1,0 +1,17 @@
+{
+  "name": "pwa-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "puppeteer": "^24.17.1",
+    "readline-sync": "^1.4.10"
+  }
+}

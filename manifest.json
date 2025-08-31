@@ -1,0 +1,40 @@
+{
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "icons": [
+        {
+            "purpose": "maskable",
+            "sizes": "512x512",
+            "src": "icon512_maskable.png",
+            "type": "image/png"
+        },
+        {
+            "purpose": "any",
+            "sizes": "512x512",
+            "src": "icon512_rounded.png",
+            "type": "image/png"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "tmnc.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "form_factor": "wide"
+        },
+        {
+            "src": "vsf.png",
+            "sizes": "540x720",
+            "type": "image/png"
+        }
+    ],
+    "orientation": "any",
+    "display": "standalone",
+    "dir": "ltr",
+    "lang": "pt-BR",
+    "name": "Conversor de Moedas ",
+    "short_name": "Conversor",
+    "start_url": "/index.html",
+    "scope": "/",
+    "description": "App de converter moedas"
+}
