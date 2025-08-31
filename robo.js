@@ -28,7 +28,7 @@ await page.waitForSelector('#target-input');
   
   });
 
-  //await browser.close();
+  await browser.close();
   res.json({ resultado: resultado });   
 });
 app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
