@@ -6,10 +6,7 @@ const cacheName = 'pwa-teste-cache-v1';
 const arquivosParaCache = [
   '/',
   '/index.html',
-  '/manifest.json',
-  '/index.js',
-  '/robo.js'
-
+  'style.css'
 ];
 
 
