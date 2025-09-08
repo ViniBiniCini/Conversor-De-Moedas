@@ -1,45 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de moedas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de moedas</title>
 
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="manifest" href="manifest.json">
-<link rel="icon" href="icon512_rounded.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon512_rounded.png" type="image/png">
 
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then(reg => console.log('Service Worker: Registrado'))
-        .catch(err => console.log(`Service Worker: Erro: ${err}`))
-    });
-  }
-</script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('Service Worker: Registrado'))
+          .catch(err => console.log(`Service Worker: Erro: ${err}`))
+      });
+    }
+  </script>
 </head>
 <body>
-    
-    <h1>Conversor de moedas</h1>
+    <center><h1>Conversor de moedas</h1>
+<p id="entrada1">
+  <label> Digite a moeda base</label>
+  <br>
+<select id="moedaBase" name="moedas">
+  <option value="AUD">AUD</option>
+  <option value="BGN">BGN</option>
+  <option value="BRL">BRL</option>
+  <option value="CAD">CAD</option>
+  <option value="CNY">CNY</option>
+  <option value="CHF">CHF</option>
+  <option value="CZK">CZK</option>
+  <option value="DKK">DKK</option>
+  <option value="EUR">EUR</option>
+  <option value="GBP">GBP</option>
+  <option value="HKD">HKD</option>
+  <option value="HUF">HUF</option>
+  <option value="IDR">IDR</option>
+  <option value="JPY">JPY</option>
+  <option value="MYR">MYR</option>
+  <option value="NOK">NOK</option>
+  <option value="NZD">NZD</option>
+  <option value="PHP">PHP</option>
+  <option value="PLN">PLN</option>
+  <option value="RON">RON</option>
+  <option value="SEK">SEK</option>
+  <option value="SGD">SGD</option>
+  <option value="TRY">TRY</option>
+  <option value="USD">USD</option>
+</select>
+</p>
+</p>
+  <br>
+  <p id="entrada2">
+  <label>Digite a quantidade</label>
+  <input id="quantidade">
+</p>
+  <br>
+  <p id="entrada3">
+  <label>Digite a moeda final</label>
+  <br>
+<select id="moedaFinal" name="moedas">
+  <option value="AUD">AUD</option>
+  <option value="BGN">BGN</option>
+  <option value="BRL">BRL</option>
+  <option value="CAD">CAD</option>
+  <option value="CNY">CNY</option>
+  <option value="CHF">CHF</option>
+  <option value="CZK">CZK</option>
+  <option value="DKK">DKK</option>
+  <option value="EUR">EUR</option>
+  <option value="GBP">GBP</option>
+  <option value="HKD">HKD</option>
+  <option value="HUF">HUF</option>
+  <option value="IDR">IDR</option>
+  <option value="JPY">JPY</option>
+  <option value="MYR">MYR</option>
+  <option value="NOK">NOK</option>
+  <option value="NZD">NZD</option>
+  <option value="PHP">PHP</option>
+  <option value="PLN">PLN</option>
+  <option value="RON">RON</option>
+  <option value="SEK">SEK</option>
+  <option value="SGD">SGD</option>
+  <option value="TRY">TRY</option>
+  <option value="USD">USD</option>
+</select>
+</p>
+  <br>
 
-    <label>Digite a moeda base</label>
-    <input id = "moedaBase"> 
-<br>
-<label> Digite a quantidade</label>
-<input id = "quantidade">
-<br>
-    <label>Digite a moeda final</label>
-    <input id = "moedaFinal">
-<br>
-    <button id = "butao">Enviar</button>
+  <button id="butao">Converter</button>
 
-<br>
-<div id = "loading" style="display: none;">buscando...</div>
-    <label id = "resultado"> </label>
-
-
- <script src="index.js"></script> 
-
+  <br>
+  <div id="loading" style="display: none;">buscando...</div>
+  <img src="seta.png" width="100" height="100" id="seta" style = "display: block">
+  <img src="seta.png" width="100" height="100" id="setaGirando" style= "display: none;">
+  <br>
+  <p id="saida">
+  <label id="resultado"></label>
+</p>
+  
+</center>
+  <script src="index.js"></script> 
 </body>
 </html>
